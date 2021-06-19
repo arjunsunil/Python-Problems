@@ -29,7 +29,7 @@ class GraduationAttendance():
         return combination_el[-4:] != 'AAAA'
 
     def update_number_of_absent(self, combination_el):
-        """ update the ceremony_absent_combination_count if the last day of the ceremony is absent for this combination"""
+        """ update the ceremony_absent_combination_count if the student is absent for the ceremony day"""
 
         if len(combination_el) == self.days and combination_el[-1] == 'A' and combination_el[-4:] != 'AAAA':
             self.ceremony_absent_combination_count = self.ceremony_absent_combination_count + 1
